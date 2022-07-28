@@ -1,0 +1,285 @@
+/*  Fonts
+-----
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+body {
+    font-size: 1.125rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display:block
+}
+
+header{
+    background-color: #f8f8f8;
+    text-align: center;
+    margin-bottom: 2em;
+    padding: 1.5em 0;
+}
+
+footer {
+    background-color: #143774;
+    color: #7d9dda;
+    text-align: center;
+    padding: 3em 0;
+}
+
+/* typography section */
+
+/* this is a class for my h2 and being used for styling instead of h2 element
+and same method for my h3 element
+*/
+h1,
+h2,
+h3,
+.article-title,
+.recent-post-title,
+.sidebar-title {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+a {
+    color: #1792d2;
+}
+
+a:hover,
+a:focus {
+    color: #143774;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.header-subtitle {
+    font-size: .75rem;
+    font-weight: 700;
+    color: #1792d2;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.article-title {
+    font-size: 1.5rem;
+}
+
+.read-more,
+.article-info {
+    font-size: 0.875rem;
+}
+
+
+.read-more {
+    color: #1792d2;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.read-more:hover,
+.read-more:focus{
+    color: #143774;
+    text-decoration: underline;
+}
+
+.article-info {
+    margin: 2rem 0;
+}
+
+/* layout of the navigation */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.5em;
+}
+
+.container-nav,
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-icons {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+    color : #1792d2;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0.5em;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: .1em;
+    font-size: 1rem;
+    padding-bottom: .3em;
+    font-weight: 700;
+    color: #707070;
+}
+
+.current-page {
+    border-bottom: 1.5px solid #143774;
+}
+
+/* layout for the about_me page, justing styling the main section of the page */
+.main-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 2em;
+}
+
+.main-second-title {
+    color: #1792d2;
+}
+
+/* the end */
+
+/* main and article styles */
+.article-main {
+    border-bottom: #707070 solid 1px;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.article-sub {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-sub-main {
+    order: 2;
+}
+
+.article-sub-sec {
+    order: 1;
+}
+
+/* aside and sidebar  */
+.sidebar-main {
+    border: 20px solid #efefef;
+    margin-bottom: 2em;
+    padding: 1em;
+
+}
+
+.sidebar-title {
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.recent-post-title {
+    font-size: 1rem;
+}
+
+
+.recent-post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 1em;
+} 
+
+.recent-post-title {
+    order: 2;
+}
+
+.recent-post-image {
+    order: 1;
+}
+
+.recent-post:last-child {
+    border: none;
+    margin: none;
+}
+
+
+/* media queries for navigation , article and sidebar */
+@media screen and (min-width: 675px) {
+    .container-nav,
+    .container-flex,
+    nav ul {
+        flex-direction: row;
+    }
+
+    main {
+        width: 70%;
+    }
+
+    aside {
+        width: 25%;
+        min-width: 200px;
+        margin-left: 1em;
+    }
+
+    .article-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-image {
+        order: -2;
+    }
+
+    .article-info {
+        order: -1;
+    }
+
+
+    .article-sub {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article-sub-main {
+        width: 65%;
+    }
+
+    .article-sub-sec {
+        width: 30%;
+    }
+
+    .article-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
